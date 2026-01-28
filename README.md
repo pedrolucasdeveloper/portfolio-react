@@ -1,36 +1,16 @@
-# 🚀 Meu Portfólio Pessoal
+# React + Vite
 
-Este é o meu repositório de portfólio pessoal, onde apresento meus projetos, habilidades e trajetória como desenvolvedor frontend. O site foi construído com foco em performance, acessibilidade e design responsivo.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🔗 **Link para o projeto:** [https://seu-link.vercel.app/](https://seu-link.vercel.app/)
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠️ Tecnologias Utilizadas
+## React Compiler
 
-O projeto foi desenvolvido utilizando o que há de mais moderno no ecossistema React:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-* **React JS** (Biblioteca principal)
-* **Vite** (Build tool para rapidez no desenvolvimento)
-* **Chakra UI** (Sistema de design e componentes acessíveis)
-* **Framer Motion** (Animações fluidas)
-* **Vercel** (Hospedagem e CI/CD)
+## Expanding the ESLint configuration
 
----
-
-## 🎨 Funcionalidades
-
-- [x] Design totalmente responsivo (Mobile/Desktop).
-- [x] Suporte a Dark Mode / Light Mode nativo do Chakra UI.
-- [x] Seção de projetos dinâmica.
-- [x] Formulário de contato ou links de redes sociais.
-
----
-
-## 💻 Como rodar o projeto localmente
-
-Se você deseja explorar o código ou rodar o projeto na sua máquina, siga os passos abaixo:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
