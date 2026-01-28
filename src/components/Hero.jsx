@@ -13,7 +13,7 @@ import {
 
 export default function Hero() {
   return (
-    <Container maxW={'6xl'} py={{ base: 10, md: 24 }}>
+    <Container id="top" maxW={'6xl'} minH={'calc(100vh - 64px)'} display="flex" alignItems="center">
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -42,12 +42,12 @@ export default function Hero() {
                 zIndex: -1,
               }}
             >
-              Seu Nome Aqui
+              Pedro Lucas
             </Text>
           </Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
-            Sou um **Desenvolvedor Frontend** apaixonado por criar interfaces 
-            digitais impecáveis. Especialista em React JS, transformo ideias complexas 
+            Sou um <strong>Desenvolvedor Frontend</strong> apaixonado por criar interfaces 
+            digitais impecáveis. Com experiência em React JS, transformo ideias complexas 
             em experiências de usuário simples e intuitivas.
           </Text>
           
@@ -68,6 +68,8 @@ export default function Hero() {
             direction={{ base: 'column', sm: 'row' }}
           >
             <Button
+              as="a"
+              href="#projects"
               rounded={'full'}
               size={'lg'}
               fontWeight={'normal'}
@@ -79,6 +81,10 @@ export default function Hero() {
               Meus Projetos
             </Button>
             <Button
+              as="a"
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               rounded={'full'}
               size={'lg'}
               fontWeight={'normal'}
@@ -86,7 +92,7 @@ export default function Hero() {
               variant={'outline'}
               borderColor={'teal.400'}
               color={useColorModeValue('gray.900', 'white')}
-              _hover={{ bg: useColorModeValue('teal.50, gray.800') }}
+              _hover={{ bg: useColorModeValue('teal.50', 'gray.800') }}
             >
               Download CV
             </Button>
