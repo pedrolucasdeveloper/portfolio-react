@@ -18,7 +18,8 @@ import {
   useColorModeValue,
   useToast,
 } from '@chakra-ui/react';
-import { MdPhone, MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { FaWhatsapp } from 'react-icons/fa';
 import { BsPerson } from 'react-icons/bs';
 import MotionSection from './MotionSection';
 
@@ -35,8 +36,8 @@ export default function Contact() {
     const subject = encodeURIComponent(`Contato de ${name || 'visitante'}`);
     const body = encodeURIComponent(`Nome: ${name}%0AEmail: ${email}%0A%0A${message}`);
     
-    // Altere para o seu e-mail real aqui
-    window.location.href = `mailto:seu-email@exemplo.com?subject=${subject}&body=${body}`;
+    // Abre o cliente de e-mail do usuário com destinatário e conteúdo já preenchidos
+    window.location.href = `mailto:spedrolucas740@gmail.com?subject=${subject}&body=${body}`;
 
     toast({ 
       title: 'Abrindo cliente de e-mail...', 
@@ -67,14 +68,20 @@ export default function Contact() {
             <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
               <VStack pl={0} spacing={4} align="flex-start">
                 <Button
+                  as="a"
+                  href="https://wa.me/5585998058739"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="md"
                   variant="ghost"
                   color="teal.400"
-                  leftIcon={<MdPhone size="20px" />}
+                  leftIcon={<FaWhatsapp size="20px" />}
                 >
                   +55 (85) 998058739
                 </Button>
                 <Button
+                  as="a"
+                  href="mailto:spedrolucas740@gmail.com"
                   size="md"
                   variant="ghost"
                   color="teal.400"

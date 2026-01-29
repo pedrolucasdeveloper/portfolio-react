@@ -21,24 +21,24 @@ import 'swiper/css/pagination';
 const PROJECTS_DATA = [
   {
     id: 1,
-    title: 'E-commerce App',
-    description: 'Um site de vendas completo com carrinho de compras e integração com API.',
+    title: 'Projeto A',
+    description: 'Descrição genérica do Projeto A. Em breve mais informações.',
     tags: ['React', 'Chakra UI', 'Vite'],
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     id: 2,
-    title: 'Dashboard de Finanças',
-    description: 'Interface administrativa para controle financeiro com gráficos interativos.',
-    tags: ['React', 'Chart.js', 'Context API'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
+    title: 'Projeto B',
+    description: 'Descrição genérica do Projeto B. Em breve mais informações.',
+    tags: ['React', 'Chakra UI', 'Vite'],
+    image: 'https://images.unsplash.com/photo-1761198845185-461286392ac2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     id: 3,
-    title: 'Social Media App',
-    description: 'Plataforma para compartilhamento de fotos e mensagens em tempo real.',
-    tags: ['React', 'Firebase', 'Tailwind'],
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600',
+    title: 'Projeto C',
+    description: 'Descrição genérica do Projeto C. Em breve mais informações.',
+    tags: ['React', 'Chakra UI', 'Vite'],
+    image: 'https://plus.unsplash.com/premium_photo-1661338803969-61af8ef4fc79?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Projects() {
           Meus Projetos
         </Heading>
         <Text color={'gray.500'} fontSize={'lg'}>
-          Explore alguns dos meus projetos recentes. Deslize para ver mais.
+          Explore alguns modelos de projetos. Deslize para ver mais.
         </Text>
       </Stack>
 

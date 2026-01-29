@@ -82,7 +82,8 @@ export default function Hero() {
             </Button>
             <Button
               as="a"
-              href="/cv.pdf"
+              href="/Curriculo_PedroLucas.pdf"
+              download="Curriculo_PedroLucas.pdf"
               target="_blank"
               rel="noopener noreferrer"
               rounded={'full'}
@@ -94,7 +95,7 @@ export default function Hero() {
               color={useColorModeValue('gray.900', 'white')}
               _hover={{ bg: useColorModeValue('teal.50', 'gray.800') }}
             >
-              Download CV
+              Download Currículo
             </Button>
           </Stack>
         </Stack>
