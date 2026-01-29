@@ -44,18 +44,20 @@ const PROJECTS_DATA = [
 
 export default function Projects() {
   const bgColor = useColorModeValue('white', 'gray.800');
-  const borderColor = useColorModeValue('gray.100', 'gray.700');
+  const borderColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
-    <Container maxW="container.lg" py={20} id="projects">
+    <Container maxW="container.xl" py={20} id="projects">
       <Stack spacing={4} as={Box} textAlign={'center'} mb={10}>
-        <Heading fontSize={'3xl'}>Meus Projetos</Heading>
-        <Text color={'gray.500'} fontSize={'xl'}>
-          Arraste para o lado para conferir meus trabalhos.
+        <Heading fontSize={'3xl'} fontWeight="bold" color={useColorModeValue('gray.900', 'white')}>
+          Meus Projetos
+        </Heading>
+        <Text color={'gray.500'} fontSize={'lg'}>
+          Explore alguns dos meus projetos recentes. Deslize para ver mais.
         </Text>
       </Stack>
 
-      <Box pb={10}>
+      <Box>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
@@ -68,39 +70,60 @@ export default function Projects() {
             768: {
               slidesPerView: 2,
             },
+            1024: {
+              slidesPerView: 3, // Mais flexível em telas maiores
+            },
           }}
           style={{
             paddingBottom: '40px',
-            "--swiper-navigation-color": "#4FD1C5",
-            "--swiper-pagination-color": "#4FD1C5",
+            "--swiper-navigation-color": "#38B2AC", // cor de navegação
+            "--swiper-pagination-color": "#38B2AC", // cor de paginação
           }}
         >
           {PROJECTS_DATA.map((project) => (
             <SwiperSlide key={project.id}>
               <Box
                 bg={bgColor}
-                boxShadow={'xl'}
-                rounded={'lg'}
+                boxShadow={'lg'}
+                rounded={'xl'}
                 p={6}
-                m={2}
+                m={4}
                 border="1px solid"
                 borderColor={borderColor}
+                transition="transform 0.3s ease, box-shadow 0.3s ease"
+                _hover={{ transform: 'scale(1.05)', boxShadow: 'xl' }}
               >
-                <Box h={'200px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-                  <Image src={project.image} h="100%" w="100%" objectFit={'cover'} roundedTop={'lg'} />
+                <Box
+                  h={'200px'}
+                  bg={'gray.100'}
+                  mt={-6}
+                  mx={-6}
+                  mb={6}
+                  pos={'relative'}
+                  borderRadius={'lg'}
+                  overflow={'hidden'}
+                >
+                  <Image
+                    src={project.image}
+                    h="100%"
+                    w="100%"
+                    objectFit={'cover'}
+                    transition="transform 0.3s ease"
+                    _groupHover={{ transform: 'scale(1.1)' }}
+                  />
                 </Box>
                 <Stack>
                   <HStack spacing={2}>
                     {project.tags.map((tag) => (
-                      <Tag key={tag} colorScheme="teal" size="sm">
+                      <Tag key={tag} colorScheme="teal" size="sm" borderRadius="full" fontWeight="medium">
                         {tag}
                       </Tag>
                     ))}
                   </HStack>
-                  <Heading fontSize={'2xl'} pt={2}>
+                  <Heading fontSize={'xl'} fontWeight="semibold" pt={2} color={useColorModeValue('gray.800', 'white')}>
                     {project.title}
                   </Heading>
-                  <Text color={'gray.500'} noOfLines={2}>
+                  <Text color={'gray.500'} noOfLines={3} fontSize={'md'}>
                     {project.description}
                   </Text>
                 </Stack>
@@ -110,6 +133,7 @@ export default function Projects() {
                   colorScheme={'teal'}
                   bg={'teal.400'}
                   _hover={{ bg: 'teal.500' }}
+                  transition="background-color 0.3s ease"
                 >
                   Ver Detalhes
                 </Button>

@@ -48,7 +48,7 @@ export default function Contact() {
   };
 
   return (
-    <Container maxW="full" mt={0} centerContent overflow="hidden" id="contact">
+    <Container maxW="container.lg" py={20} centerContent overflow="hidden" id="contact">
       <MotionSection>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
@@ -56,101 +56,93 @@ export default function Contact() {
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 10 }}
           p={{ sm: 5, md: 5, lg: 16 }}
-          boxShadow="2xl"
+          boxShadow="xl"
+          direction={{ base: 'column', md: 'row' }}
         >
-          <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-              {/* Lado Esquerdo: Informações */}
-              <WrapItem>
-                <Box>
-                  <Heading color="teal.400">Contato</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                    Preencha o formulário para falar comigo.
-                  </Text>
-                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                    <VStack pl={0} spacing={3} align="flex-start">
-                      <Button
-                        size="md"
-                        variant="ghost"
-                        color="teal.400"
-                        leftIcon={<MdPhone size="20px" />}
-                      >
-                        +55 (XX) XXXXX-XXXX
-                      </Button>
-                      <Button
-                        size="md"
-                        variant="ghost"
-                        color="teal.400"
-                        leftIcon={<MdEmail size="20px" />}
-                      >
-                        seu-email@exemplo.com
-                      </Button>
-                    </VStack>
-                  </Box>
-                </Box>
-              </WrapItem>
+          <Box p={4} flex="1">
+            <Heading color="teal.400" fontSize={{ base: '2xl', md: '3xl' }}>Contato</Heading>
+            <Text mt={3} color="gray.500" fontSize="lg">
+              Preencha o formulário abaixo para entrar em contato comigo.
+            </Text>
+            <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+              <VStack pl={0} spacing={4} align="flex-start">
+                <Button
+                  size="md"
+                  variant="ghost"
+                  color="teal.400"
+                  leftIcon={<MdPhone size="20px" />}
+                >
+                  +55 (85) 998058739
+                </Button>
+                <Button
+                  size="md"
+                  variant="ghost"
+                  color="teal.400"
+                  leftIcon={<MdEmail size="20px" />}
+                >
+                  spedrolucas740@gmail.com
+                </Button>
+              </VStack>
+            </Box>
+          </Box>
 
-              {/* Lado Direito: Formulário Funcional */}
-              <WrapItem>
-                <Box bg={useColorModeValue('gray.50', 'gray.700')} borderRadius="lg" p={8} color={useColorModeValue('gray.800', 'white')}>
-                  <form onSubmit={handleSubmit}>
-                    <VStack spacing={5}>
-                      <FormControl id="name" isRequired>
-                        <FormLabel>Nome</FormLabel>
-                        <InputGroup>
-                          <InputLeftElement pointerEvents="none">
-                            <BsPerson color="gray.500" />
-                          </InputLeftElement>
-                          <Input 
-                            type="text" 
-                            size="md" 
-                            placeholder="Seu nome"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                          />
-                        </InputGroup>
-                      </FormControl>
+          <Box bg={useColorModeValue('gray.50', 'gray.700')} borderRadius="lg" p={8} color={useColorModeValue('gray.800', 'white')} flex="1">
+            <form onSubmit={handleSubmit}>
+              <VStack spacing={5}>
+                <FormControl id="name" isRequired>
+                  <FormLabel>Nome</FormLabel>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                      <BsPerson color="gray.500" />
+                    </InputLeftElement>
+                    <Input 
+                      type="text" 
+                      size="md" 
+                      placeholder="Seu nome"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </InputGroup>
+                </FormControl>
 
-                      <FormControl id="email" isRequired>
-                        <FormLabel>E-mail</FormLabel>
-                        <InputGroup>
-                          <InputLeftElement pointerEvents="none">
-                            <MdOutlineEmail color="gray.500" />
-                          </InputLeftElement>
-                          <Input 
-                            type="email" 
-                            size="md" 
-                            placeholder="seu@email.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                          />
-                        </InputGroup>
-                      </FormControl>
+                <FormControl id="email" isRequired>
+                  <FormLabel>E-mail</FormLabel>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                      <MdOutlineEmail color="gray.500" />
+                    </InputLeftElement>
+                    <Input 
+                      type="email" 
+                      size="md" 
+                      placeholder="seu@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </InputGroup>
+                </FormControl>
 
-                      <FormControl id="message" isRequired>
-                        <FormLabel>Mensagem</FormLabel>
-                        <Textarea
-                          placeholder="Olá, gostaria de falar sobre..."
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                        />
-                      </FormControl>
+                <FormControl id="message" isRequired>
+                  <FormLabel>Mensagem</FormLabel>
+                  <Textarea
+                    placeholder="Olá, gostaria de falar sobre..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </FormControl>
 
-                      <Button
-                        type="submit"
-                        variant="solid"
-                        bg="teal.400"
-                        color="white"
-                        _hover={{ bg: 'teal.500' }}
-                        width="full"
-                      >
-                        Enviar Mensagem
-                      </Button>
-                    </VStack>
-                  </form>
-                </Box>
-              </WrapItem>
-            </Wrap>
+                <Button
+                  type="submit"
+                  variant="solid"
+                  bg="teal.400"
+                  color="white"
+                  _hover={{ bg: 'teal.500' }}
+                  width="full"
+                  transition="background-color 0.3s ease"
+                >
+                  Enviar Mensagem
+                </Button>
+              </VStack>
+            </form>
           </Box>
         </Flex>
       </MotionSection>

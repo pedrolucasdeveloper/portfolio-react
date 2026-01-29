@@ -36,9 +36,9 @@ export default function About() {
             <Wrap justify={{ base: 'center', md: 'left' }}>
               <Tag colorScheme="teal" variant="subtle">React</Tag>
               <Tag colorScheme="teal" variant="subtle">Chakra UI</Tag>
-              <Tag colorScheme="teal" variant="subtle">JavaScript (ES6+)</Tag>
+              <Tag colorScheme="teal" variant="subtle">JavaScript</Tag>
               <Tag colorScheme="teal" variant="subtle">TypeScript</Tag>
-              <Tag colorScheme="teal" variant="subtle">Accessible UI</Tag>
+              <Tag colorScheme="teal" variant="subtle">UI/UX</Tag>
               <Tag colorScheme="teal" variant="subtle">Performance</Tag>
             </Wrap>
           </Box>
@@ -46,15 +46,44 @@ export default function About() {
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="100%">
             <Box bg={cardBg} p={6} rounded="md" boxShadow="sm">
               <Heading size="sm" mb={2} textAlign="left">Experiência</Heading>
-              <Text color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
-                Desenvolvimento de SPAs com integração a APIs REST e componentes reutilizáveis.
-              </Text>
+              <Stack spacing={1} align="start">
+                <Text color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
+                  Desenvolvimento de projetos em React com Vite em JavaScript e TypeScript, usando ferramentas de UI e integração com APIs.
+                </Text>
+                <Text color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
+                  Estágio em desenvolvimento de sistemas na Open7.
+                </Text>
+                <Text color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
+                  Desenvolvedor web frontend na Avante Tech Jr.
+                </Text>
+                <Text fontWeight="bold" color="teal.500" textAlign="left">
+                  Atualmente: Gerente de projetos na Avante Tech Jr.
+                </Text>
+              </Stack>
             </Box>
             <Box bg={cardBg} p={6} rounded="md" boxShadow="sm">
               <Heading size="sm" mb={2} textAlign="left">Formação</Heading>
-              <Text color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
-                Formação em desenvolvimento web com projetos práticos em React.
-              </Text>
+              <Stack spacing={3} align="start">
+                <Stack spacing={0} align="start">
+                  <Text fontSize="md" fontWeight="bold" color="teal.500" textAlign="left">
+                    Cursando Ciência da Computação — Universidade Federal do Ceará (UFC)
+                  </Text>
+                  <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
+                    Conhecimentos em Engenharia de Software, Fundamentos de Banco de Dados,
+                    Estruturas de Dados e Inteligência Artificial.
+                  </Text>
+                </Stack>
+
+                <Stack spacing={0} align="start">
+                  <Text fontSize="md" fontWeight="semibold" textAlign="left">
+                    Técnico em Informática — EEEP de Baturité
+                  </Text>
+                  <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')} textAlign="left">
+                    Conhecimentos em gestão do tempo, programação web e outras competências
+                    práticas desenvolvidas no curso técnico.
+                  </Text>
+                </Stack>
+              </Stack>
             </Box>
           </SimpleGrid>
         </Box>

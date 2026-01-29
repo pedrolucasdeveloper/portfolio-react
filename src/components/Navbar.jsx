@@ -50,7 +50,7 @@ export default function Navbar() {
         <Flex h={16} alignItems="center" justifyContent="space-between">
           <HStack spacing={4} alignItems="center">
             <Heading size="sm" color="teal.400" as="a" href="#top">
-              Dev.Portfólio
+              Dev.PedroLucas
             </Heading>
             <HStack as="nav" spacing={2} display={{ base: 'none', md: 'flex' }}>
               {NAV_LINKS.map((nav) => (
@@ -74,7 +74,8 @@ export default function Navbar() {
                 aria-label="GitHub"
                 icon={<FaGithub />}
                 as="a"
-                href="#"
+                href="https://github.com/pedrolucasdeveloper"
+                target="_blank"
                 size="sm"
                 variant="ghost"
               />

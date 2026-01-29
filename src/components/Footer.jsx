@@ -30,14 +30,14 @@ export default function Footer() {
         align={{ base: 'center', md: 'center' }}
       >
         <Stack direction={'row'} spacing={2} align={'center'}>
-          <Heading size="sm" color="teal.400">Dev.Portfólio</Heading>
+          <Heading size="sm" color="teal.400">Dev.PedroLucas</Heading>
           <Text fontSize="sm">| © {currentYear} Todos os direitos reservados</Text>
         </Stack>
 
         <Stack direction={'row'} spacing={6}>
           <IconButton
             as="a"
-            href="https://github.com/seu-usuario"
+            href="https://github.com/pedrolucasdeveloper"
             target="_blank"
             aria-label="GitHub"
             icon={<FaGithub fontSize="20px" />}
@@ -46,7 +46,7 @@ export default function Footer() {
           />
           <IconButton
             as="a"
-            href="https://linkedin.com/in/seu-perfil"
+            href="https://linkedin.com/in/pedro-lucas-a40414242"
             target="_blank"
             aria-label="LinkedIn"
             icon={<FaLinkedin fontSize="20px" />}
@@ -55,7 +55,8 @@ export default function Footer() {
           />
           <IconButton
             as="a"
-            href="#"
+            href="https://www.instagram.com/opedrolucasdev/"
+            target="_blank"
             aria-label="Instagram"
             icon={<FaInstagram fontSize="20px" />}
             variant="ghost"
